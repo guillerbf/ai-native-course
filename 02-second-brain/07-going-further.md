@@ -174,4 +174,4 @@ You've covered:
 
 **Your next step:** Go to `../second-brain/` — it's a ready-to-use starter template. Customize the `CLAUDE.md`, add your first sources, and run `/ingest`.
 
-The skills are in `../03-skills/`. Read them to understand what they do, then copy them into your second brain's `.claude/commands/` folder.
+The skills are in `../03-skills/`. Read them to understand what they do, then copy each one into your second brain as `.claude/skills/<name>/SKILL.md`.

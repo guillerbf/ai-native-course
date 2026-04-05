@@ -1,6 +1,6 @@
 # Skill: Research Query
 
-> **How to use:** Copy this file to your second brain's `.claude/commands/query.md`
+> **How to use:** Copy this file to your second brain's `.claude/skills/query/SKILL.md`
 > Then run `/query [your question]` in Claude Code from your second brain folder.
 
 ---

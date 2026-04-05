@@ -55,7 +55,7 @@ Once you have files in `raw/`, you run the ingest skill. Here's what it does:
 /ingest
 ```
 
-Under the hood (from `.claude/commands/ingest.md`):
+Under the hood (from `.claude/skills/ingest/SKILL.md`):
 
 ```markdown
 # Skill: Ingest New Sources

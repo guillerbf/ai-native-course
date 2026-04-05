@@ -1,6 +1,6 @@
 # Skill: Compile Wiki
 
-> **How to use:** Copy this file to your second brain's `.claude/commands/compile.md`
+> **How to use:** Copy this file to your second brain's `.claude/skills/compile/SKILL.md`
 > Then run `/compile` in Claude Code from your second brain folder.
 > Optional: `/compile [concept name]` to force-compile a specific concept.
 

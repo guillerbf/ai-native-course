@@ -19,7 +19,7 @@ A human curator would spend hours on this. Claude can do it in minutes.
 /lint
 ```
 
-From `.claude/commands/lint.md`:
+From `.claude/skills/lint/SKILL.md`:
 
 ```markdown
 # Skill: Wiki Health Check

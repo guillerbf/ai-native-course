@@ -1,6 +1,6 @@
 # Skill: Wiki Health Check
 
-> **How to use:** Copy this file to your second brain's `.claude/commands/lint.md`
+> **How to use:** Copy this file to your second brain's `.claude/skills/lint/SKILL.md`
 > Then run `/lint` in Claude Code from your second brain folder.
 > Optional: `/lint deep` to run contradiction detection (slower but more thorough).
 

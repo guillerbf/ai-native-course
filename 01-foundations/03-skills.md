@@ -16,25 +16,31 @@ That's it. Claude reads the skill file, follows the instructions precisely, and 
 
 ## The Anatomy of a Skill File
 
-Skills live in a `.claude/commands/` folder in your project (or globally in `~/.claude/commands/`):
+Skills live in a `.claude/skills/` folder in your project. Each skill is a subdirectory containing a `SKILL.md` file:
 
 ```
 my-project/
 ├── CLAUDE.md
 └── .claude/
-    └── commands/
-        ├── ingest.md      ← /ingest skill
-        ├── compile.md     ← /compile skill
-        ├── query.md       ← /query skill
-        └── lint.md        ← /lint skill
+    └── skills/
+        ├── ingest/
+        │   └── SKILL.md   ← /ingest skill
+        ├── compile/
+        │   └── SKILL.md   ← /compile skill
+        ├── query/
+        │   └── SKILL.md   ← /query skill
+        └── lint/
+            └── SKILL.md   ← /lint skill
 ```
+
+For personal (cross-project) skills, the same structure lives at `~/.claude/skills/`.
 
 A skill file is just a markdown file with instructions. Here's a simple example:
 
 ```markdown
 # Skill: Daily Briefing
 
-Read the file wiki/_index.md and the last 5 files modified in wiki/.
+Read the last 5 files modified in wiki/ and any index file defined in CLAUDE.md.
 Then write a short briefing (one paragraph) summarizing:
 - What topics have been recently updated
 - What questions are still open (look for TODO markers)
@@ -43,7 +49,7 @@ Then write a short briefing (one paragraph) summarizing:
 Save the briefing to wiki/briefings/YYYY-MM-DD.md using today's date.
 ```
 
-Save this as `.claude/commands/briefing.md` and you can run `/briefing` any time.
+Save this as `.claude/skills/briefing/SKILL.md` and you can run `/briefing` any time.
 
 ---
 
@@ -93,8 +99,8 @@ Claude receives the question as `$ARGUMENTS` and runs the full research workflow
 
 | Location | Scope | Use Case |
 |----------|-------|----------|
-| `.claude/commands/` in your project | This project only | Domain-specific workflows (compile wiki, ingest source) |
-| `~/.claude/commands/` on your machine | All projects | General-purpose tasks (daily briefing, code review) |
+| `.claude/skills/<name>/` in your project | This project only | Domain-specific workflows (compile wiki, ingest source) |
+| `~/.claude/skills/<name>/` on your machine | All projects | General-purpose tasks (daily briefing, code review) |
 
 For your second brain, all skills live in the project — they are tuned to your specific wiki structure and conventions.
 
@@ -106,7 +112,7 @@ Skills improve over time. The workflow is:
 
 1. **Do it manually** — ask Claude ad-hoc once or twice
 2. **Notice the pattern** — you keep asking for the same thing
-3. **Write the skill** — capture the instructions in `.claude/commands/`
+3. **Write the skill** — capture the instructions in `.claude/skills/<name>/SKILL.md`
 4. **Refine** — run it, see what's off, edit the skill file
 5. **Trust it** — the skill is now part of your workflow
 
@@ -118,9 +124,9 @@ This is how professionals using Claude Code accumulate leverage over time. Your 
 
 In your `my-first-brain` folder:
 
-1. Create the directory `.claude/commands/`
+1. Create the directory `.claude/skills/summarize/`
 
-2. Create `.claude/commands/summarize.md` with these contents:
+2. Create `.claude/skills/summarize/SKILL.md` with these contents:
 ```markdown
 # Skill: Summarize New Source
 
@@ -129,7 +135,6 @@ For each new file found:
 1. Read the file
 2. Write a 3-paragraph summary: what it is, key insights, relevance to the project
 3. Save it to wiki/summaries/[filename]-summary.md
-4. Add a line to wiki/_index.md linking to the new summary
 
 Report back with how many new files were processed.
 ```
@@ -143,7 +148,7 @@ Report back with how many new files were processed.
 ## Key Takeaways
 
 - A skill is a saved prompt that runs a repeatable workflow
-- Skills live in `.claude/commands/` as markdown files
+- Skills live in `.claude/skills/<name>/SKILL.md` (project) or `~/.claude/skills/<name>/SKILL.md` (personal)
 - Invoke with `/skill-name` or `/skill-name [arguments]`
 - Skills encode your processes — they are institutional memory
 - Build your skill library incrementally as patterns emerge

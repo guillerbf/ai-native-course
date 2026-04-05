@@ -1,6 +1,6 @@
 # Skill: Ingest New Sources
 
-> **How to use:** Copy this file to your second brain's `.claude/commands/ingest.md`
+> **How to use:** Copy this file to your second brain's `.claude/skills/ingest/SKILL.md`
 > Then run `/ingest` in Claude Code from your second brain folder.
 > Optional: `/ingest [specific file]` to process one file.
 

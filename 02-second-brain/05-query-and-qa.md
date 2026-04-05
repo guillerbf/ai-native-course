@@ -14,7 +14,7 @@ This is qualitatively different from searching the web or asking a generic LLM. 
 /query What are the main investment risks in European battery storage?
 ```
 
-From `.claude/commands/query.md`:
+From `.claude/skills/query/SKILL.md`:
 
 ```markdown
 # Skill: Research Query

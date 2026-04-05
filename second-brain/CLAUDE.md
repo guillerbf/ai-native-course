@@ -42,12 +42,14 @@ You are the researcher, writer, librarian, and analyst.
 ```
 second-brain/
 ├── CLAUDE.md              ← These instructions (read every session)
+├── .claude/
+│   └── skills/            ← Slash commands (/ingest, /compile, /query, /lint, /briefing)
 ├── raw/                   ← My source material. READ ONLY — never modify.
 │   ├── articles/          ← Web articles, blog posts
 │   ├── papers/            ← Research papers, reports
 │   └── notes/             ← My own notes, meeting transcripts
 └── wiki/                  ← Your domain. Create and maintain everything here.
-    ├── _index.md          ← Master index — always keep updated
+    ├── _index.md          ← Master index (project convention — keep updated)
     ├── concepts/          ← Synthesized concept articles
     ├── summaries/         ← One summary per raw/ source
     ├── queries/           ← Saved answers to research questions

@@ -15,9 +15,7 @@ Create this folder structure:
 second-brain/
 ├── CLAUDE.md
 ├── raw/
-│   └── .gitkeep
 └── wiki/
-    └── _index.md
 ```
 
 Or run these commands in your terminal:
@@ -90,31 +88,9 @@ about market size, regulatory risk, and founder quality indicators."]
 
 ---
 
-## Step 3: Initialize the Index (2 minutes)
+## Step 3: Install Obsidian (optional but recommended, 5 minutes)
 
-Create `second-brain/wiki/_index.md`:
-
-```markdown
-# Wiki Index
-
-Last updated: [today's date]
-
-## Concepts
-*(none yet)*
-
-## Summaries
-*(none yet)*
-
-## Queries
-*(none yet)*
-
-## Briefings
-*(none yet)*
-```
-
----
-
-## Step 4: Install Obsidian (optional but recommended, 5 minutes)
+> **Note on the index:** The `CLAUDE.md` template tells Claude to maintain a `wiki/_index.md` file. This is a convention defined in `CLAUDE.md` — Claude will create it automatically on first run. It is not a Claude Code default; it is an instruction you give Claude.
 
 1. Download [Obsidian](https://obsidian.md) — free
 2. Open it, choose "Open folder as vault"
@@ -150,7 +126,7 @@ Claude should describe your second brain accurately. If not, refine your `CLAUDE
 
 - [ ] `second-brain/CLAUDE.md` exists and is filled in with your domain
 - [ ] `second-brain/raw/` exists (empty is fine)
-- [ ] `second-brain/wiki/_index.md` exists
+- [ ] `second-brain/wiki/` exists (Claude will populate it)
 - [ ] Claude Code can open the folder
 - [ ] Claude correctly describes the project when asked
 

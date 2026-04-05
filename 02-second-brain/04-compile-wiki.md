@@ -29,7 +29,7 @@ Concept articles are where your second brain becomes genuinely intelligent — a
 /compile
 ```
 
-From `.claude/commands/compile.md`:
+From `.claude/skills/compile/SKILL.md`:
 
 ```markdown
 # Skill: Compile Wiki

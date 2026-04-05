@@ -63,7 +63,7 @@ You might wonder: why not just search the web? Or use a Retrieval-Augmented Gene
 
 **`wiki/`** — Claude's domain. It writes, maintains, and organizes everything here.
 
-**`wiki/_index.md`** — The master table of contents. One-line summaries of every article. Claude updates this every time it adds content.
+**`wiki/_index.md`** — A project-defined master table of contents. One-line summaries of every article. You instruct Claude (via `CLAUDE.md`) to keep this updated — it's a convention for this project, not a Claude Code default.
 
 **`wiki/concepts/`** — Synthesized knowledge: Claude identifies recurring themes across sources and writes concept articles.
 

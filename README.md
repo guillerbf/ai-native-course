@@ -39,8 +39,9 @@ ai-native-course/
 └── second-brain/            # Your actual second brain (starter template)
     ├── CLAUDE.md
     ├── raw/
-    └── wiki/
-        └── _index.md
+    ├── wiki/
+    └── .claude/
+        └── skills/          # /ingest /compile /query /lint /briefing
 ```
 
 ## Learning Path
